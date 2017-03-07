@@ -3,40 +3,26 @@ window.addEventListener('load',function(){
   document.getElementById('user').innerHTML=user;
   var contenido=document.getElementById('sprint');
 
-  document.getElementById('s1').onclick = function(){
-    contenido.innerHTML="<h4>Sprint 1: Introcucción a Javascript</h4>"+
-    "<ol>"+
-      "<li>Fundamentos de Programación</li>"+
-      "<li>Funciones</li>"+
-      "<li>Arreglos</li>"+
-      "<li>Objetos</li>"+
-    "</ol>"+
-    "<hr>"+
-    "<h3>Quiz</h3>"+
-    "<h4>Existen dos tipos de Funciones</h4>"+
-    "<input type='radio' name='' value='1'>Expresadas y declaradas<br>"+
-    "<input type='radio' name='' value='2'>Explicitas y declaradas<br>"+
-    "<input type='radio' name='' value='3'>Expresadas y derivadas<br>"+
-    "<h4>¿Cuál es la finalidad de hacer una prueba unitaria?</h4>"+
-    "<input type='radio' name='' value='4'><br>"+
-    "<input type='radio' name='' value='5'><br>"+
-    "<input type='radio' name='' value='6'><br>"+
-    "<h4>¿Qué significa DOM?</h4>"+
-    "<input type='radio' name='' value='7'><br>"+
-    "<input type='radio' name='' value='8'><br>"+
-    "<input type='radio' name='' value='9'><br><br>"+
-    "<button id='enviar'>Enviar</button>";
+  var mostrar= function(div) {
+  	var text1 = document.getElementById("text1");
+    var text2 = document.getElementById("text2");
+    var text3 = document.getElementById("text3");
+
+  	if (div == "text1") {
+  		 text1.style.display = "block";
+       text2.style.display = "none";
+       text3.style.display = "none";
+  	} else if (div == "text2"){
+      text1.style.display = "none";
+      text2.style.display = "block";
+      text3.style.display = "none";
+  	} else{
+      text1.style.display = "none";
+      text2.style.display = "none";
+      text3.style.display = "block";
+    }
   }
 
-  document.getElementById('s2').onclick=function(){
-    contenido.innerHTML="";
-
-
-  }
-
-  document.getElementById('s3').onclick=function(){
-    contenido.innerHTML="No hay Lecciones (Todavia)";
-  }
   document.getElementById('enviar').onclick=function(){
       var cont1=0,cont2=0,cont3=0,rpta1,rpta2,rpta3;
 
