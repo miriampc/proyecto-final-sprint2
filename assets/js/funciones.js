@@ -33,10 +33,10 @@ window.addEventListener('load',function(){
 
 
   }
-/*
+
   document.getElementById('s3').onclick=function(){
-    contenido.innerHTML=""
-  }*/
+    contenido.innerHTML="No hay Lecciones (Todavia)";
+  }
   document.getElementById('enviar').onclick=function(){
       var cont1=0,cont2=0,cont3=0,rpta1,rpta2,rpta3;
 
@@ -62,7 +62,7 @@ window.addEventListener('load',function(){
       if(rpta1==0){cont1=1;}
       if(rpta2==0){cont2=1;}
       if(rpta3==1){cont3=1;}
-      
+
       var total=cont1+cont2+cont3;
 
       contenido.innerHTML="<h4>Quiz</h4> Tiene "+ total+" correctas";
