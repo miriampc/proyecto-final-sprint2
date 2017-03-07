@@ -13,26 +13,58 @@
 
   <div class="contenedor-contenido-pagina">
     <nav align="right">
-      <div class="dropdown" align="right">Hola <span id="user"> </span>
+      <div class="dropdown" align="right">Hola coder <span id="user"> </span>
         <button onclick="myFunction()" class="dropbtn">&#9776;</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="coders.html">Perfil</a>
+          <a href="coders.html">Coders</a>
           <a href="logout.html">Salir</a>
         </div>
       </div>
     </nav>
+
     <form action="" id="form">
 
       <div align ="center">
         <img src="assets/images/laboratoria.png" alt=""><!-- width="470px" height="260px">-->
       </div>
-      <h2>Qué es Laboratoria?</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eligendi qui magnam aliquid debitis nostrum obcaecati saepe fugit quae voluptates vero, a quasi odio quaerat, aut unde quos. Sit, voluptatibus.</lore></p>
-      <h4>Temas</h4>
-      <button id="s1" onclick="mostrar('text1')">Sprint 1</button>
-      <button id="s2" onclick="mostrar('text2')">Sprint 2</button>
-      <button id="s3" onclick="mostrar('text3')">Sprint 3</button>
-      <div id="sprint">
+
+      <div>
+        <h2>Qué es Laboratoria?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum eligendi qui magnam aliquid debitis nostrum obcaecati saepe fugit quae voluptates vero, a quasi odio quaerat, aut unde quos. Sit, voluptatibus.</lore></p>
+        <h4>Temas</h4>
+        <button id="sprint1" onclick="mostrar('sprint1')">Sprint 1</button>
+        <button id="sprint2" onclick="mostrar('sprint2')">Sprint 2</button>
+        <button id="sprint3" onclick="mostrar('sprint3')">Sprint 3</button>
+      </div>
+
+      <div id="sprint1">
+        <h4>Sprint 1: Introduccion a Javascript</h4>
+        <ol>
+          <li>Fundamentos de la Programación</li>
+          <li>Funciones</li>
+          <li>Arreglos</li>
+          <li>Objetos</li>
+        </ol>
+        <hr>
+        <div class="contenido">
+        <h3>Quiz</h3>
+        <h4>Existen dos tipos de funciones</h4>
+        <input type="radio" name="click1" value="1" required="">Expresadas y declaradas<br>
+        <input type="radio" name="click1" value="0" required="">Explicitas y declaradas<br>
+        <input type="radio" name="click1" value="0" required="">Expresadas y derivadas<br>
+        <h4>Elija una propiedad de los arreglos</h4>
+        <input type="radio" name="click2" value="0" required="">clear<br>
+        <input type="radio" name="click2" value="1" required="">pop<br>
+        <input type="radio" name="click2" value="0" required="">add<br>
+        <h4>Un objeto tiene __________ y __________ .</h4>
+        <input type="radio" name="click3" value="0" required="">números y letras<br>
+        <input type="radio" name="click3" value="0" required="">partes y validaciones<br>
+        <input type="radio" name="click3" value="1" required="">propiedades y valores<br><br>
+        <button id="enviar">ENVIAR</button>
+        </div>
+      </div>
+
+      <div id="sprint2">
         <h4>Sprint 2: Introcucción al desarrollo web y construcción de páginas web.</h4>
         <ol>
           <li>Ciclo de vida del desarrollo web y arquitectura cliente/servidor / Configuracion del ambiente de trabajo e introducción a git</li>
@@ -43,6 +75,7 @@
           <li>DOM</li>
         </ol>
         <hr>
+        <div class="contenido">
         <h3>Quiz</h3>
         <h4>¿Cuál es el comando para iniciar un repositorio desde la consola?</h4>
         <input type="radio" name="click1" value="1" required="">git init<br>
@@ -57,7 +90,15 @@
         <input type="radio" name="click3" value="8" required="">Document Object Model<br>
         <input type="radio" name="click3" value="9" required="">Document Obsolet Model<br><br>
         <button id="enviar">ENVIAR</button>
+        </div>
       </div>
+
+      <div id="sprint3">
+        <h4>Sprint 3: Introcucción al desarrollo web y construcción de páginas web.</h4>
+        <p>Aún no está disponible este sprint.</p>
+
+      </div>
+
     </form>
   </div>
   <script src="assets/js/dropdown.js"></script>
