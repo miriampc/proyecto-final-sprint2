@@ -20,7 +20,7 @@ header {
 input {
   margin-right: 14px;
 }
-div.contenedor-contenido-pagina {
+.contenedor-contenido-pagina {
   margin: 0 auto;
   padding: 21px;
   width: 1200px;
@@ -28,14 +28,14 @@ div.contenedor-contenido-pagina {
 .hidden {
   display: none;
 }
-div.div-coder{
+.div-coder{
   display: inline-block;
   background-color: #FAAE27;
-  margin: 30px 0 0 30px;
+  margin: 30px 0 0 25px;
   padding: 20px 30px;
   border: 1px solid black;
 }
-div.div-salir-coder{
+.div-salir-coder{
   width: 100vw;
   height: 100vh;
   background-color: #FAAE27;

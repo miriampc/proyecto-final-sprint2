@@ -26,36 +26,67 @@ window.addEventListener('load',function(){
     }
   }
 
-/*
-
-  document.getElementById('enviar').onclick=function(){
+  document.getElementById('enviar1').onclick=function(){
       var contador = 0;
 
       var respuesta1=document.getElementsByName('click1');
       var respuesta2=document.getElementsByName('click2');
       var respuesta3=document.getElementsByName('click3');
 
-      for (var i = 0; i <respuesta1.length; i++) {
-         if (respuesta1[i].checked) {
-            rpta1=respuesta1[i].value;
-        }
-      }
-      for (var i = 0; i <respuesta2.length; i++) {
-         if (respuesta2[i].checked) {
-            rpta2=respuesta2[i].value;
-        }
-      }
-      for (var i = 0; i <respuesta3.length; i++) {
-         if (respuesta3[i].checked) {
-            rpta3=respuesta3[i].value;
-        }
-      }
+      respuesta1.forEach(function(e,i){
+        if (respuesta1[i].value=="1") {
+          if(respuesta1[i].checked){
+             contador++;
+          }
+       }
+      });
+      respuesta2.forEach(function(e,i){
+        if (respuesta2[i].value=="1") {
+          if(respuesta2[i].checked){
+             contador++;
+          }
+       }
+      });
+      respuesta3.forEach(function(e,i){
+        if (respuesta3[i].value=="1") {
+          if(respuesta3[i].checked){
+             contador++;
+          }
+       }
+      });
+      contenido1.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
+  }
 
-      contenido.innerHTML="<h4>Quiz</h4> Tiene "+ total+" correctas";
+  document.getElementById('enviar2').onclick=function(){
+      var contador = 0;
+      var respuesta1=document.getElementsByName('click1');
+      var respuesta2=document.getElementsByName('click2');
+      var respuesta3=document.getElementsByName('click3');
+
+      respuesta1.forEach(function(e,i){
+        if (respuesta1[i].value=="1") {
+          if(respuesta1[i].checked){
+             contador++;
+          }
+       }
+      });
+      respuesta2.forEach(function(e,i){
+        if (respuesta2[i].value=="1") {
+          if(respuesta2[i].checked){
+             contador++;
+          }
+       }
+      });
+      respuesta3.forEach(function(e,i){
+        if (respuesta3[i].value=="1") {
+          if(respuesta3[i].checked){
+             contador++;
+          }
+       }
+      });
+      contenido2.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
   }
 
   document.getElementById('form').onsubmit=function(e){
     e.preventDefault();
   }
-*/
-
