@@ -28,7 +28,6 @@ window.addEventListener('load',function(){
 
   document.getElementById('enviar1').onclick=function(){
       var contador = 0;
-
       var respuesta1=document.getElementsByName('click1');
       var respuesta2=document.getElementsByName('click2');
       var respuesta3=document.getElementsByName('click3');
@@ -37,7 +36,7 @@ window.addEventListener('load',function(){
         if (respuesta1[i].value=="1") {
           if(respuesta1[i].checked){
              contador++;
-          }
+          }else("saad");
        }
       });
       respuesta2.forEach(function(e,i){
