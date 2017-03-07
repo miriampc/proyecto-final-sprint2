@@ -1,10 +1,13 @@
 window.addEventListener('load',function(){
   var user=prompt("Ingrese su nombre de usuario: ");
   document.getElementById('user').innerHTML=user;
-  var contenido=document.getElementById('sprint');
+});
 
-  var mostrar= function(div) {
-  	var sprint1 = document.getElementById("sprint1");
+  var contenido1=document.getElementById('contenido1');
+  var contenido2=document.getElementById('contenido2');
+
+   function mostrar(div) {
+    var sprint1 = document.getElementById("sprint1");
     var sprint2 = document.getElementById("sprint2");
     var sprint3 = document.getElementById("sprint3");
 
@@ -12,19 +15,21 @@ window.addEventListener('load',function(){
   		 sprint1.style.display = "block";
        sprint2.style.display = "none";
        sprint3.style.display = "none";
-  	} else if (div == "sprint2"){
+  	} if (div == "sprint2"){
       sprint1.style.display = "none";
       sprint2.style.display = "block";
       sprint3.style.display = "none";
-  	} else{
+  	} if (div == "sprint3"){
       sprint1.style.display = "none";
       sprint2.style.display = "none";
       sprint3.style.display = "block";
     }
   }
 
+/*
+
   document.getElementById('enviar').onclick=function(){
-      var cont1=0,cont2=0,cont3=0,rpta1,rpta2,rpta3;
+      var contador = 0;
 
       var respuesta1=document.getElementsByName('click1');
       var respuesta2=document.getElementsByName('click2');
@@ -45,11 +50,6 @@ window.addEventListener('load',function(){
             rpta3=respuesta3[i].value;
         }
       }
-      if(rpta1==0){cont1=1;}
-      if(rpta2==0){cont2=1;}
-      if(rpta3==1){cont3=1;}
-
-      var total=cont1+cont2+cont3;
 
       contenido.innerHTML="<h4>Quiz</h4> Tiene "+ total+" correctas";
   }
@@ -57,5 +57,5 @@ window.addEventListener('load',function(){
   document.getElementById('form').onsubmit=function(e){
     e.preventDefault();
   }
+*/
 
-});

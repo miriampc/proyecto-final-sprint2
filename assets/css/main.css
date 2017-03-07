@@ -90,3 +90,15 @@ div.dropdown {
 .show {
   display:block;
 }
+
+#sprint1 {
+  display: none;
+}
+
+#sprint2 {
+  display: block;
+}
+
+#sprint3 {
+  display: none;
+}
