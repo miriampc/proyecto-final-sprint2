@@ -31,36 +31,29 @@ window.addEventListener('load',function(){
       var respuesta1=document.getElementsByName('click1');
       var respuesta2=document.getElementsByName('click2');
       var respuesta3=document.getElementsByName('click3');
+      
+      if(respuesta1[0].checked==false && respuesta1[1].checked==false && respuesta1[2].checked==false){
+            alert("Debe marcar su respuesta en cada pregunta");
+      }else if(respuesta2[0].checked==false && respuesta2[1].checked==false && respuesta2[2].checked==false){
+          alert("Debe marcar su respuesta en cada pregunta");
+      }else if(respuesta3[0].checked==false && respuesta3[1].checked==false && respuesta3[2].checked==false) {
+          alert("Debe marcar su respuesta en cada pregunta");
+      }else {
+        alert("aki");
+          if(respuesta1[0].checked){contador++;}
+          if(respuesta2[1].checked){contador++;}
+          if(respuesta3[2].checked){contador++;}
 
-      respuesta1.forEach(function(e,i){
-        if (respuesta1[i].value=="1") {
-          if(respuesta1[i].checked){
-             contador++;
-          }else("saad");
-       }
-      });
-      respuesta2.forEach(function(e,i){
-        if (respuesta2[i].value=="1") {
-          if(respuesta2[i].checked){
-             contador++;
-          }
-       }
-      });
-      respuesta3.forEach(function(e,i){
-        if (respuesta3[i].value=="1") {
-          if(respuesta3[i].checked){
-             contador++;
-          }
-       }
-      });
-      contenido1.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
+        contenido1.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
+      }
+
   }
 
   document.getElementById('enviar2').onclick=function(){
       var contador = 0;
-      var respuesta1=document.getElementsByName('click1');
-      var respuesta2=document.getElementsByName('click2');
-      var respuesta3=document.getElementsByName('click3');
+      var respuesta1=document.getElementsByName('opc1');
+      var respuesta2=document.getElementsByName('opc2');
+      var respuesta3=document.getElementsByName('opc3');
 
       respuesta1.forEach(function(e,i){
         if (respuesta1[i].value=="1") {
