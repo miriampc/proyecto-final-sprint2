@@ -1,7 +1,8 @@
-window.addEventListener('load',function(){
+/*window.addEventListener('load',function(){
   var user=prompt("Ingrese su nombre de usuario: ");
   document.getElementById('user').innerHTML=user;
-});
+});*/
+
 
   var contenido1=document.getElementById('contenido1');
   var contenido2=document.getElementById('contenido2');
@@ -41,7 +42,6 @@ window.addEventListener('load',function(){
       }else if(respuesta3[0].checked==false && respuesta3[1].checked==false && respuesta3[2].checked==false) {
           alert("Debe marcar su respuesta en cada pregunta");
       }else {
-        //alert("aki");
           if(respuesta1[0].checked){
             contador++;
           }

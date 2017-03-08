@@ -14,14 +14,13 @@
       <div class="dropdown" align="right">Hola coder <span id="user"> </span>
         <button onclick="myFunction()" class="dropbtn">&#9776;</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="coders.html">Coders</a>
+          <a href="coders.html" id="coder">Coders</a>
           <a href="logout.html">Salir</a>
         </div>
       </div>
     </nav>
-
+    
     <form action="" id="form">
-
       <div align ="center">
         <img src="assets/images/laboratoria.png" alt=""><!-- width="470px" height="260px">-->
       </div>
@@ -99,6 +98,19 @@
       </div>
     </form>
   </div>
+  <script type="text/javascript">
+  var myParam = location.search.split('nombre=')[1]
+          var nombre = document.getElementById('user');
+          if (myParam == undefined) {
+              var inicio = prompt('¿Cual es tu nombre?');
+              nombre.innerHTML = inicio;
+          } else {
+              nombre.innerHTML = myParam;
+          }
+          document.getElementById("coder").addEventListener('click',function() {
+              this.href += "?nombre="+nombre.innerHTML;
+          })
+  </script>
   <script src="assets/js/dropdown.js"></script>
   <script src="assets/js/funciones.js"></script>
 </body>

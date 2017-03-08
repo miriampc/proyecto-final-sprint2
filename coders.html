@@ -19,8 +19,14 @@
     <div class="div-coder"></div>
     <div class="div-coder"></div>
 
-    <input class="boton-volver-inicio" type="button" onclick="location.href='index.html'" value="Volver al inicio">
+    <input class="boton-volver-inicio" type="button" id="volver" onclick="location.href='index.html'" value="Volver al inicio">
 
+  <script type="text/javascript">
+    var myParam = location.search.split('nombre=')[1]
+      document.getElementById("volver").addEventListener('click',function(e) {
+       this.href += "?nombre="+myParam;
+        })
+  </script>
   <script src="assets/js/app.js"></script>
 </body>
 </html>
