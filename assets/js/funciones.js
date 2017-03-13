@@ -1,12 +1,21 @@
 window.addEventListener('load',function(){
-  var user=prompt("Ingrese su nombre de usuario: ");
-  document.getElementById('user').innerHTML=user;
+  if(typeof localStorage != undefined){
+    if (sessionStorage.getItem("nomcoder")) {
+      document.getElementById('user').innerHTML=sessionStorage.getItem("nomcoder");
+    }else {
+      var user=prompt("Ingrese su nombre de usuario: ");
+      sessionStorage.setItem("nomcoder",user);
+      document.getElementById('user').innerHTML=sessionStorage.getItem("nomcoder");
+    }
+  }else {
+    console.log("Your browser no supported localStorage")
+  }
 });
 
   var contenido1=document.getElementById('contenido1');
   var contenido2=document.getElementById('contenido2');
 
-   function mostrar(div) {
+  function mostrar(div) {
     var sprint1 = document.getElementById("sprint1");
     var sprint2 = document.getElementById("sprint2");
     var sprint3 = document.getElementById("sprint3");
@@ -31,52 +40,36 @@ window.addEventListener('load',function(){
       var respuesta1=document.getElementsByName('click1');
       var respuesta2=document.getElementsByName('click2');
       var respuesta3=document.getElementsByName('click3');
-      
-      if(respuesta1[0].checked==false && respuesta1[1].checked==false && respuesta1[2].checked==false){
-            alert("Debe marcar su respuesta en cada pregunta");
-      }else if(respuesta2[0].checked==false && respuesta2[1].checked==false && respuesta2[2].checked==false){
-          alert("Debe marcar su respuesta en cada pregunta");
-      }else if(respuesta3[0].checked==false && respuesta3[1].checked==false && respuesta3[2].checked==false) {
+
+      if((respuesta1[0].checked==false && respuesta1[1].checked==false && respuesta1[2].checked==false)||
+         (respuesta2[0].checked==false && respuesta2[1].checked==false && respuesta2[2].checked==false)||
+         (respuesta3[0].checked==false && respuesta3[1].checked==false && respuesta3[2].checked==false)){
           alert("Debe marcar su respuesta en cada pregunta");
       }else {
-        alert("aki");
           if(respuesta1[0].checked){contador++;}
           if(respuesta2[1].checked){contador++;}
           if(respuesta3[2].checked){contador++;}
-
         contenido1.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
       }
-
   }
 
   document.getElementById('enviar2').onclick=function(){
       var contador = 0;
-      var respuesta1=document.getElementsByName('opc1');
-      var respuesta2=document.getElementsByName('opc2');
-      var respuesta3=document.getElementsByName('opc3');
-
-      respuesta1.forEach(function(e,i){
-        if (respuesta1[i].value=="1") {
-          if(respuesta1[i].checked){
-             contador++;
-          }
-       }
+      var answers=document.getElementsByName('opc1');
+      answers.forEach(function(e){
+        if(e.checked==true){
+          contador++;
+        }
       });
-      respuesta2.forEach(function(e,i){
-        if (respuesta2[i].value=="1") {
-          if(respuesta2[i].checked){
-             contador++;
-          }
-       }
-      });
-      respuesta3.forEach(function(e,i){
-        if (respuesta3[i].value=="1") {
-          if(respuesta3[i].checked){
-             contador++;
-          }
-       }
-      });
-      contenido2.innerHTML="<h4>Quiz</h4> Tiene "+ contador+" correctas";
+      if (contador==3) {
+        var correctas=0;
+        if(answers[0].checked){correctas++;}
+        if(answers[3].checked){correctas++;}
+        if(answers[7].checked){correctas++;}
+        contenido2.innerHTML="<h4>Quiz</h4> Tiene "+ correctas+" correctas";
+      }else {
+          alert("Debe marcar su respuesta en cada pregunta");
+      }
   }
 
   document.getElementById('form').onsubmit=function(e){
